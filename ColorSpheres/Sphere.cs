@@ -4,7 +4,7 @@ namespace ColorSpheres
 {
     class Sphere
     {
-        private Color color;
+        private readonly Color color;
         private float raio;
         private int throws;
         public Sphere(Color color, float raio)
