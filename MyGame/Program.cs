@@ -23,6 +23,8 @@ namespace MyGame
                 Console.WriteLine($"{enemies[i].GetName()}" +
                 $"{enemies[i].GetHealth()} {enemies[i].GetShield()}");
             }
+
+            Console.WriteLine(enemies[0].GetPowerPickUp());
             
         }
     }

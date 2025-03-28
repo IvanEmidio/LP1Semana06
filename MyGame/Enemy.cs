@@ -11,6 +11,8 @@ namespace MyGame
         private float health;
         private float shield;
 
+        static private int powerPickedUp;
+
 
 
         public Enemy(string name)
@@ -23,6 +25,11 @@ namespace MyGame
         public string GetName()
         {
             return name;
+        }
+
+        public int GetPowerPickUp()
+        {
+            return powerPickedUp;
         }
 
         public void TakeDamage(float damage)
@@ -74,6 +81,8 @@ namespace MyGame
                 this.shield += powerUp;
                 if(this.shield > 100) this.shield = 100;
             }
+
+            powerPickedUp += 1;
         }
     }
 }
