@@ -12,6 +12,7 @@ namespace MyGame
         private float shield;
 
 
+
         public Enemy(string name)
         {
             this.name = name;
@@ -57,6 +58,21 @@ namespace MyGame
             else
             {
                 this.name = name.Substring(0, size);
+            }
+        }
+
+        public void PickupPowerUp(PowerUp power, float powerUp)
+        {
+            if(power == PowerUp.Health)
+            {
+                this.health += powerUp;
+                if(this.health > 100) this.health = 100;
+            }
+
+            if(power == PowerUp.Shield)
+            {
+                this.shield += powerUp;
+                if(this.shield > 100) this.shield = 100;
             }
         }
     }
