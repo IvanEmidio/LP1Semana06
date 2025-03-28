@@ -35,5 +35,29 @@ namespace MyGame
                 if(health < 0) health = 0;
             }
         }
+
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        public float GetShield()
+        {
+            return shield;
+        }
+
+        public void SetName(string name)
+        {
+            int size = 8;
+
+            if(name.Length < size)
+            {
+                this.name = name;
+            }
+            else
+            {
+                this.name = name.Substring(0, size);
+            }
+        }
     }
 }
